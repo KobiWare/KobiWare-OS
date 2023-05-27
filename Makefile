@@ -38,6 +38,14 @@ $(BUILD_DIR)/kernel.bin: always
 	$(ASM) $(SRC_DIR)/kernel/main.asm -f bin -o $(BUILD_DIR)/kernel.bin
 
 #
+# main.c, not sure if this even works?
+#
+test: $(BUILD_DIR)/kernel/main.c
+$(BUILD_DIR)/main: always $(SRC_DIR)/kernel/main.c
+	mkdir -p $(BUILD_DIR)
+	$(CC) -g -o $(BUILD_DIR)/test $(SRC_DIR)/kernel/main.c
+
+#
 # Tools
 #
 tools_fat: $(BUILD_DIR)/tools/fat

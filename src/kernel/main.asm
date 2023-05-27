@@ -59,5 +59,5 @@ puts:
 msg_hello: db 'Welcome to KobiWare OS!', ENDL, 0
 msg_info: db 'KobiWare OS is currently being actively developed by ONE person. Check out the operating system source code at https://github.com/KobiWare/KobiWare-OS!', ENDL, 0
 msg_wip: db 'KobiWare OS is currently a work in progress, please expect bugs and please do not use this as an actual operating system.', ENDL, 0
-msg_loading: db 'KobiWare OS is now loading...', ENDL, 0
+msg_loading: db 'KobiWare OS is now loading... TEST2', ENDL, 0
 line_blank: db ' ', ENDL, 0
