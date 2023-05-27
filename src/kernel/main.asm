@@ -9,6 +9,8 @@ start:
     ; print hello world message
     mov si, msg_hello
     call puts
+    mov si, msg_wip
+    call puts
 
 .halt:
     cli
@@ -42,4 +44,5 @@ puts:
     pop si    
     ret
 
-msg_hello: db 'Hello world!', ENDL, 0
+msg_hello: db 'Welcome to KobiWare OS!', ENDL, 0
+msg_wip: db 'KobiWare OS is currently a work in progress, please expect bugs and please do not use this as an actual operating system.', ENDL, 0
