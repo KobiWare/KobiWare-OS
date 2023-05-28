@@ -1,6 +1,5 @@
 boot.c(6): Warning! W131: No prototype found for function 'print'
 boot.c(13): Warning! W138: No newline at end of file
-main.c(3): Warning! W303: Parameter 'bootDrive' has been defined, but not referenced
 boot.c(6): Warning! W308: The function 'print' without prototyped parameters called
 boot.c(6): Note! I2002: 'print' defined in: boot.c(6)
 boot.c(7): Warning! W308: The function 'print' without prototyped parameters called
