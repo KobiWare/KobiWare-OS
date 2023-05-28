@@ -18,7 +18,7 @@ floppy_image: $(BUILD_DIR)/KobiWareOS.img
 
 $(BUILD_DIR)/KobiWareOS.img: bootloader kernel
 	dd if=/dev/zero of=$(BUILD_DIR)/KobiWareOS.img bs=512 count=2880
-	mkfs.fat -F 12 -n "NBOS" $(BUILD_DIR)/KobiWareOS.img
+	mkfs.fat -F 12 -n "KobiWareOS" $(BUILD_DIR)/KobiWareOS.img
 	dd if=$(BUILD_DIR)/stage1.bin of=$(BUILD_DIR)/KobiWareOS.img conv=notrunc
 	mcopy -i $(BUILD_DIR)/KobiWareOS.img $(BUILD_DIR)/stage2.bin "::stage2.bin"
 	mcopy -i $(BUILD_DIR)/KobiWareOS.img $(BUILD_DIR)/kernel.bin "::kernel.bin"
