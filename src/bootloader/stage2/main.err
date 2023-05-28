@@ -1,0 +1,16 @@
+main.c(6): Warning! W131: No prototype found for function 'print'
+main.c(4): Warning! W303: Parameter 'bootDrive' has been defined, but not referenced
+main.c(6): Warning! W308: The function 'print' without prototyped parameters called
+main.c(6): Note! I2002: 'print' defined in: main.c(6)
+main.c(7): Warning! W308: The function 'print' without prototyped parameters called
+main.c(7): Note! I2002: 'print' defined in: main.c(6)
+main.c(8): Warning! W308: The function 'print' without prototyped parameters called
+main.c(8): Note! I2002: 'print' defined in: main.c(6)
+main.c(9): Warning! W308: The function 'print' without prototyped parameters called
+main.c(9): Note! I2002: 'print' defined in: main.c(6)
+main.c(10): Warning! W308: The function 'print' without prototyped parameters called
+main.c(10): Note! I2002: 'print' defined in: main.c(6)
+main.c(11): Warning! W308: The function 'print' without prototyped parameters called
+main.c(11): Note! I2002: 'print' defined in: main.c(6)
+main.c(12): Warning! W308: The function 'print' without prototyped parameters called
+main.c(12): Note! I2002: 'print' defined in: main.c(6)
