@@ -1,8 +1,7 @@
 Open Watcom Linker Version 2.0 beta May  1 2021 00:25:34 (32-bit)
 Copyright (c) 2002-2021 The Open Watcom Contributors. All Rights Reserved.
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       23/05/28 01:27:16
-Warning! W1027: file /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/c/main.obj(/home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/main.c): redefinition of bootMessages_ ignored
+Created on:       23/06/01 19:37:43
 Executable Image: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2.bin
 creating a RAW Binary Image executable
 
@@ -14,7 +13,7 @@ creating a RAW Binary Image executable
 Group                           Address              Size
 =====                           =======              ====
 
-DGROUP                          0000011a             000002a4
+DGROUP                          00000640             00000164
 
 
 
@@ -26,10 +25,10 @@ Segment                Class          Group          Address         Size
 =======                =====          =====          =======         ====
 
 _ENTRY                 CODE           AUTO           00000000        00000013
-_TEXT                  CODE           AUTO           00000013        00000106
-CONST                  DATA           DGROUP         0000011a        000002a4
-CONST2                 DATA           DGROUP         000003be        00000000
-_DATA                  DATA           DGROUP         000003be        00000000
+_TEXT                  CODE           AUTO           00000013        0000062d
+CONST                  DATA           DGROUP         00000640        00000152
+CONST2                 DATA           DGROUP         00000792        00000011
+_DATA                  DATA           DGROUP         000007a4        00000000
 
 
                         +----------------+
@@ -45,14 +44,17 @@ Address        Symbol
 Module: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/asm/main.obj(main.asm)
 00000000       entry
 Module: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/asm/x86.obj(x86.asm)
-00000013       _x86_Video_WriteCharTeletype
-Module: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/c/boot.obj(/home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/boot.c)
-00000026       bootMessages_
+00000013       _x86_div64_32
+00000041       _x86_Video_WriteCharTeletype
 Module: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/c/main.obj(/home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/main.c)
-000000a4       _cstart_
+00000054       _cstart_
 Module: /home/nathan/Documents/Programming/Projects/KobiWare-OS/build/stage2/c/stdio.obj(/home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/stdio.c)
-000000bb+      putc_
-000000e2       print_
+000000ae+      putc_
+000000d5+      puts_
+0000010c+      puts_f_
+00000149       _printf
+000003cc+      printf_number_
+00000792+      _g_HexChars
 
 
                         +---------------------+
@@ -66,22 +68,17 @@ Module          Segment               Class           Address         Size
 ======          =======               =====           =======         ====
 
 main.asm        _ENTRY                CODE           00000000         00000013
-x86.asm         _TEXT                 CODE           00000013         00000013
-/home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/boot.c
-                _TEXT                 CODE           00000026         0000003f
-                CONST                 DATA           0000011a         00000152
-                CONST2                DATA           000003be         00000000
-                _DATA                 DATA           000003be         00000000
+x86.asm         _TEXT                 CODE           00000013         00000041
 /home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/main.c
-                _TEXT                 CODE           00000065         00000056
-                CONST                 DATA           0000026c         00000152
-                CONST2                DATA           000003be         00000000
-                _DATA                 DATA           000003be         00000000
+                _TEXT                 CODE           00000054         0000005a
+                CONST                 DATA           00000640         00000152
+                CONST2                DATA           00000792         00000000
+                _DATA                 DATA           000007a4         00000000
 /home/nathan/Documents/Programming/Projects/KobiWare-OS/src/bootloader/stage2/stdio.c
-                _TEXT                 CODE           000000bb         0000005e
-                CONST                 DATA           000003be         00000000
-                CONST2                DATA           000003be         00000000
-                _DATA                 DATA           000003be         00000000
+                _TEXT                 CODE           000000ae         00000592
+                CONST                 DATA           00000792         00000000
+                CONST2                DATA           00000792         00000011
+                _DATA                 DATA           000007a4         00000000
 Warning! W1014: stack segment not found
 
 
@@ -90,6 +87,6 @@ Warning! W1014: stack segment not found
                         +-----------------------+
 
 Stack size:  0200 (512.)
-Memory size:  03be (958.)
+Memory size:  07a4 (1956.)
 Entry point address: 00000000
 Link time: 00:00.00
