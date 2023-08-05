@@ -1,0 +1,30 @@
+disk.h(11): Error! E1026: Invalid declarator
+disk.h(13): Error! E1009: Expecting ',' but found 'disk'
+disk.h(13): Error! E1116: An id list not allowed except for function definition
+disk.h(14): Error! E1009: Expecting ',' but found 'disk'
+disk.h(14): Warning! W138: No newline at end of file
+disk.h(14): Error! E1116: An id list not allowed except for function definition
+x86.h(12): Warning! W138: No newline at end of file
+disk.c(4): Error! E1009: Expecting ',' but found '*'
+disk.c(9): Error! E1011: Symbol 'disk' has not been declared
+disk.c(9): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+disk.c(9): Warning! W102: Parameter 2: Type mismatch (warning)
+disk.c(9): Note! I2003: source conversion type is 'unsigned char *'
+disk.c(9): Note! I2004: target conversion type is 'unsigned char'
+disk.c(9): Error! E1176: Parameter 3, pointer type mismatch
+disk.c(9): Note! I2003: source conversion type is 'unsigned short *'
+disk.c(9): Note! I2004: target conversion type is 'unsigned char *'
+disk.c(9): Error! E1151: Parameter count does not agree with previous definition
+disk.c(9): Note! I2002: 'x86_Disk_GetDriveParams' defined in: x86.h(12)
+disk.c(12): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+disk.c(12): Error! E1011: Symbol 'driveNumber' has not been declared
+disk.c(13): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+disk.c(14): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+disk.c(15): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+disk.c(4): Warning! W303: Parameter 'DISK' has been defined, but not referenced
+disk.c(20): Error! E1009: Expecting ',' but found '*'
+disk.c(22): Error! E1011: Symbol 'sectorOut' has not been declared
+disk.c(22): Error! E1029: Expression must be 'pointer to ...'
+disk.c(22): Error! E1011: Symbol 'lba' has not been declared
+disk.c(22): Error! E1011: Symbol 'disk' has not been declared
+disk.c(22): Error! E1147: Too many errors: compilation aborted
